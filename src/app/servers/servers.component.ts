@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
+  serverName = '';
 
   constructor() { 
     setTimeout(() => {
@@ -25,5 +26,12 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreationStatus = 'Sever was created!';
+  }
+
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+    //we have to wrap HTMLInputElement in HTML tags to inform
+    //ts that we know that the type of the HTML element of this event 
+    //will be an HTML input
   }
 }

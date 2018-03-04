@@ -1,9 +1,12 @@
-<!-- event binding - typically in js if we want a button to do something -->
-<!-- we attach onClick inside the HTML tag -->
-<!-- in angular we use event binding -->
-<!-- it's syntax is (), place the name of the event in the parens -->
-<!-- then ="" the name of the method -->
-
+<!-- $event is a reserved variable name that you can use in the template -->
+<!-- for event binding -->
+<!-- it will fetch the event data -->
+<label>Server Name</label>
+<input 
+  type="text" 
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+  <p>{{ serverName }}</p>
 <button 
   class="btn btn-primary" 
   [disabled]="!allowNewServer"
