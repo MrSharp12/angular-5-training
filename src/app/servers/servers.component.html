@@ -1,11 +1,22 @@
-<!-- $event is a reserved variable name that you can use in the template -->
-<!-- for event binding -->
-<!-- it will fetch the event data -->
-<label>Server Name</label>
+<!-- two-way databiding combines property and event binding -->
+<!-- [()] is the syntax for two-way databinding-->
+<!-- must use special directive, ngModel, for two-way databinding -->
+<!-- to be able to use ngModel, the FormsModule (from @angular/forms) -->
+<!-- needs to be added to the imports[]array in the AppModule -->
+<!-- should be there by default in a CLI project -->
+<!-- two-way works in the following way -->
+<!-- it will trigger on the input event -->
+<!-- and update the value of the component automatically, as well the input-->
+
+<!-- <label>Server Name</label>
 <input 
   type="text" 
   class="form-control"
-  (input)="onUpdateServerName($event)">
+  (input)="onUpdateServerName($event)"> -->
+  <input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
   <p>{{ serverName }}</p>
 <button 
   class="btn btn-primary" 
