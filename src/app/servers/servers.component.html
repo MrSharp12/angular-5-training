@@ -1,7 +1,12 @@
-<!-- square brackets indicate to angular that -->
-<!-- we property binding (dynamicaly bind some property) -->
-<!-- we are binding to the native element property (disabled) -->
-<!-- our own created TS property(allowNewServer) -->
+<!-- when to use property binding vs string interpolation -->
+<!-- if you want to output something to your template, like printing text -->
+<!-- use string interpolation -->
+<!-- if you want to change some property, like an html element -->
+<!-- use property binding -->
+<!-- keep in mind, string interpolation only works within a normal template -->
+<!-- not within another expression of that template, like property binding -->
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- <p>{{ allowNewServer }}</p> -->
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
