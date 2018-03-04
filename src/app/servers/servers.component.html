@@ -1,5 +1,7 @@
-<!--here I created another server folder through the cli, ng generate component servers
-  now I am adding the app-server selector as an example
-  of how components can be passed around-->
+<!-- square brackets indicate to angular that -->
+<!-- we property binding (dynamicaly bind some property) -->
+<!-- we are binding to the native element property (disabled) -->
+<!-- our own created TS property(allowNewServer) -->
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <app-server></app-server>
 <app-server></app-server>
