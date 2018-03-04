@@ -5,5 +5,10 @@ import { Component } from '@angular/core';//import component, since TS doesn't k
     templateUrl: './server.component.html'
 })//component decorator, let's angular know that this is a component
 export class ServerComponent { //exporting this component, so it can be used elsewhere
-
+    serverId = 10;
+    serverStatus = 'offline';
+    //these properties will be output to the template
+    getServerStatus() {
+        return this.serverStatus;
+    }
 }
