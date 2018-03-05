@@ -1,8 +1,9 @@
-<!-- ngStyle is the directive -->
-<!-- we need to use property binding on this directive -->
-<!-- in order for it to do something -->
-<!-- ngStyle expects a js object -->
-<!-- can be designated as a css selector within quotations -->
-<!-- or camel case -->
+<!-- where ngStyle allows use to change the CSS style itself -->
+<!-- ngClass allows us to dynamically add or remove CSS classes -->
+<!-- must be property bound -->
+<!-- key value pairs, keys are the CSS classes names -->
+<!-- values are the conditions determinig if the class -->
+<!-- should be attached or not -->
 
-<p [ngStyle]="{backgroundColor: getColor()}">Server with {{ serverId }} is {{ getServerStatus() }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">Server with {{ serverId }} is {{ getServerStatus() }}</p>
