@@ -8,7 +8,16 @@ export class ServerComponent { //exporting this component, so it can be used els
     serverId = 10;
     serverStatus = 'offline';
     //these properties will be output to the template
+
+    constructor() {//constructor is a method each ts has
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
     getServerStatus() {
         return this.serverStatus;
+    }
+
+    getColor() {
+        return this.serverStatus === 'online' ? 'green' : 'red';
     }
 }

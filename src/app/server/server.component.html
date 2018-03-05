@@ -1,7 +1,8 @@
-<!-- {{}} is the syntax for string interpolation in angular -->
-<!-- always has to return a string, or something that can easily be converted to a string -->
-<!-- can't write multi line expressions -->
-<!-- ternary expressions work however -->
-<p>
-    Server with {{ serverId }} is {{ getServerStatus() }}
-</p>
+<!-- ngStyle is the directive -->
+<!-- we need to use property binding on this directive -->
+<!-- in order for it to do something -->
+<!-- ngStyle expects a js object -->
+<!-- can be designated as a css selector within quotations -->
+<!-- or camel case -->
+
+<p [ngStyle]="{backgroundColor: getColor()}">Server with {{ serverId }} is {{ getServerStatus() }}</p>
