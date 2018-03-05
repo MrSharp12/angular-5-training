@@ -1,13 +1,18 @@
-<!-- here is event binding to listen to the click -->
-<!-- string interpolation to output the data -->
-<!-- property binding to enable the button -->
-<!-- two-way databinding to fetch our data -->
+<!-- ngIf statement works like an if statment -->
+<!-- typically, directives are added using an attribute selector -->
+<!-- ngIf is a structural directive (designated by the *), meaning it changes the DOM -->
+<!-- * is needed before ngIf, otherwise it will not work correctly -->
+<!-- ngIf must return anything that is a boolean, including a method or directly make the check -->
+<!-- between the quotation marks -->
+<!-- note, ngIf item that is created isn't hidden -->
+<!-- it's just not there, it gets added or removed -->
 
-<!-- <label>Server Name</label>
-<input 
+
+<label>Server Name</label>
+<!-- <input 
   type="text" 
   class="form-control"
-  (input)="onUpdateServerName($event)"> -->
+  (input)="onUpdateServerName($event)">  -->
   <input 
     type="text"
     class="form-control"
@@ -18,6 +23,7 @@
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>
