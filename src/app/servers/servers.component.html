@@ -1,6 +1,9 @@
-<!-- attribute directives don't add or remove elements -->
-<!-- they only change the element they were placed on -->
-
+<!-- ngFor is a structural directive -->
+<!-- base syntax is: define a temporary variable for inside the loop -->
+<!-- give it any name you like -->
+<!-- then of and the array name, similar to the for of loop -->
+<!-- this will loop through all the elements of the array -->
+<!-- and assign the individual element to the dynamic variable -->
 
 <label>Server Name</label>
 <!-- <input 
@@ -22,5 +25,4 @@
 <ng-template #noServer>
   <p>No server was created!</p>
 </ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
